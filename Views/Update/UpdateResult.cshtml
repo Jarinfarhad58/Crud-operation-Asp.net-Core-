@@ -1,0 +1,116 @@
+﻿@model Star_Academy.Models.Result
+
+@{
+    ViewData["Title"] = "UpdateResult";
+}
+
+
+
+
+
+
+<h2>You can update result here</h2>
+
+<table align="center" border="1">
+    <tr>
+        <th>Marks</th>
+        <th>Grade</th>
+    </tr>
+    <tr>
+        <td>90-100</td>
+        <td>A</td>
+    </tr>
+    <tr>
+        <td>80-89</td>
+        <td>B</td>
+    </tr>
+    <tr>
+        <td>70-79</td>
+        <td>C</td>
+    </tr>
+    <tr>
+        <td>60-69</td>
+        <td>D</td>
+    </tr>
+    <tr>
+        <td>0-59</td>
+        <td>F</td>
+    </tr>
+</table>
+
+
+<form class="form-horizontal" asp-controller="Update" asp-action="UpdateResult" method="post">
+
+    <div class="form-group">
+        <label asp-for="StudentName" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="StudentName" class="form-control" />
+            <span asp-validation-for="StudentName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="StudentID" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="StudentID" class="form-control" />
+            <span asp-validation-for="StudentID" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Class" class="form-control" />
+            <span asp-validation-for="Class" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Bngla" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Bngla" class="form-control" />
+            <span asp-validation-for="Bngla" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="English" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="English" class="form-control" />
+            <span asp-validation-for="English" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mathmatics" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Mathmatics" class="form-control" />
+            <span asp-validation-for="Mathmatics" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Science" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Science" class="form-control" />
+            <span asp-validation-for="Science" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Religion" class="col-md-2 control-label"></label>
+        <div class="col-md-10">
+            <input asp-for="Religion" class="form-control" />
+            <span asp-validation-for="Religion" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="submit" class="btn btn-default">Upload</button>
+        </div>
+    </div>
+    @if (ViewBag.Message != null)
+    {
+        <div class="form-control">
+            <div class="col-md-10">@ViewBag.Message</div>
+        </div>
+
+    }
+    <div>
+        @Html.ActionLink("Back to List", "StudentResult","Home")
+    </div>
+</form>

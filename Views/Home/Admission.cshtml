@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "Admission";
+}
+
+
+
+
+<div class="container">
+    <h2>Admission Process</h2>
+    <p>1.The students will fill up the admition form.</p>
+    <p>2.The "Admin" part is for admin not for student.</p>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Click Here
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Admission Form", "AdmissionForm")</li>
+            <li>@Html.ActionLink("Admin Login", "AdminAdmission","Update")</li>
+
+        </ul>
+    </div>
+</div>
+
+

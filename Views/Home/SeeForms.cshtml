@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Star_Academy.Models.Form>
+@{
+    ViewData["Title"] = "SeeForms";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Student Forms</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    <th>Form ID</th>
+                    <th>Student Name</th>
+                    <th>Mobile</th>
+                    
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.FormID</td>
+                        <td>@item.StudentName</td>
+                        <td>@item.Mobile</td>
+                        
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.FormID }) |
+                            @Html.ActionLink("Detail", "Detail", new { id = item.FormID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.FormID })
+                        </td>
+                    </tr>
+
+
+                }
+            </table>
+
+        }
+        else
+        {
+            <p>No Results to be shown</p>
+
+        }
+    </div>
+</div>

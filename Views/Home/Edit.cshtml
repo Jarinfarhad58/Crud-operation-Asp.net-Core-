@@ -1,0 +1,81 @@
+﻿
+@model Star_Academy.Models.Result
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <form class="form-horizontal" asp-controller="Update" asp-action="UpdateResult" method="post">
+
+        <div class="form-group">
+            <label asp-for="StudentName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="StudentName" class="form-control" />
+                <span asp-validation-for="StudentName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="StudentID" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="StudentID" class="form-control" />
+                <span asp-validation-for="StudentID" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Class" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Class" class="form-control" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Bngla" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Bngla" class="form-control" />
+                <span asp-validation-for="Bngla" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="English" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="English" class="form-control" />
+                <span asp-validation-for="English" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Mathmatics" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Mathmatics" class="form-control" />
+                <span asp-validation-for="Mathmatics" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Science" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Science" class="form-control" />
+                <span asp-validation-for="Science" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Religion" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Religion" class="form-control" />
+                <span asp-validation-for="Religion" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-default">Upload</button>
+            </div>
+        </div>
+       
+        <div>
+            @Html.ActionLink("Back to List", "StudentResult", "Home")
+        </div>
+    </form>
+}

@@ -1,0 +1,78 @@
+﻿
+@model Star_Academy.Models.Result
+
+@{
+    ViewData["Title"] = "Detail";
+}
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StudentID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StudentID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bngla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bngla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.English)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.English)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mathmatics)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mathmatics)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Science)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Science)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.StudentID  }) |
+    @Html.ActionLink("Back to List", "StudentResult","Home")
+</p>

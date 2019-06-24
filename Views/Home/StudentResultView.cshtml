@@ -1,0 +1,47 @@
+﻿
+
+@model IEnumerable<Star_Academy.Models.Result>
+
+@{
+    ViewData["Title"] = "StudentResultView";
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Student Results</h2>
+        @if (Model.Any())
+        {
+            <table class="table">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student ID</th>
+                    <th>Class</th>
+                    <th>GPA</th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.StudentName</td>
+                        <td>@item.StudentID</td>
+                        <td>@item.Class</td>
+                        <td>@item.English</td>
+                        <td>
+                           
+                            @Html.ActionLink("Detail", "DetailView", new { id = item.StudentID }) 
+                           
+                        </td>
+                    </tr>
+
+
+                }
+            </table>
+
+        }
+        else
+        {
+            <p>No Results to be shown</p>
+
+        }
+    </div>
+</div>
